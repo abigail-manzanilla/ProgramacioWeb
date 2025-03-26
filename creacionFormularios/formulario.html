@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="diseñoF.css">
+	<title>Document</title>
+</head>
+<body>
+	<h1>FORMULARIO </h1>
+	<br/><br>
+
+<h2>DATOS PERSONALES</h2>
+	<form method="post" action="/">
+  <label for= "nom">NOMBRE(S):</label> 
+  	<input name="nombre" autocomplete="off" placeholder="Introduce tu nombre" minlength="3" maxlength="40" required>
+  <label for= "ape">APELLIDO(S):</label> 
+  	<input name="apellido" autocomplete="off" placeholder="Introduce tu apellido" minlength="3" maxlength="40" required>
+  <label for= "Edad">EDAD:</label>
+  	<input type="number" name="edad" placeholder="Edad" min="1" max="85" required>
+
+  <br/><br>
+  	<label for= "Fecha de nacimiento">FECHA DE NACIMIENTO:</label>  
+  	<input type="date" name="date" placeholder="dd/mm/aaaa" min="1900-01-01" max="2024-12-31" required>
+  <label for= "EC">ESTADO CIVIL:</label> 
+
+  	<select>
+  	<option value="1">NINGUNA</option>
+    <option value="1">SOLTERO(A)</option>
+    <option value="2">DIVORSIADO(A)</option>
+    <option value="3">VIUDO(A)</option>
+  </select>
+  	<br/><br>
+
+<h2>DATOS DE CONTACTO</h2>
+  <label for= "Tel">TELEFONO:</label> 
+  	<input type="Telefono" name="telefono" placeholder="+XX XXX XXXXXX" max="2024-12-31" required> 
+  <label for= "Cor">EMAIL:</label> 
+  	<input type="email" name="correo" placeholder="Email" required>
+  
+
+
+        <br/><br>  <input type="submit" name="Enviar">
+</form>
+
+</body>
+</html>
