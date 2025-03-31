@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="Diseño.css">
+	<title>Document</title>
+</head>
+<body>
+
+	<form id="pedidoForm">
+        <h2>REALIZA TU PEDIDO</h2>
+        
+        <label for="nombre">Nombre Completo:</label>
+        <input type="text" id="nombre" name="nombre" required pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+" title="Solo letras y espacios">
+        
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{10,}" title="Debe contener al menos 10 dígitos">
+        
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="producto">Selecciona el Producto:</label>
+        <select id="producto" name="producto" required>
+            <option value="">Seleccione...</option>
+            <option value="pastel">Pastel</option>
+            <option value="cupcake">Cupcakes</option>
+            <option value="galletas">Galletas</option>
+        </select>
+
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" name="cantidad" required min="1">
+        
+        <label for="fecha">Fecha de Entrega:</label>
+        <input type="date" id="fecha" name="fecha" required>
+       
+        <button type="submit">Enviar Pedido</button>
+    </form>
+    <script>
+        document.getElementById('pedidoForm').addEventListener('submit', function(event) {
+            let valido = true;
+            let hoy = new Date().toISOString().split('T')[0];
+
+            let nombre = document.getElementById('nombre');
+            let telefono = document.getElementById('telefono');
+            let cantidad = document.getElementById('cantidad');
+            let fecha = document.getElementById('fecha');
+
+            // Validación de la fecha de entrega
+            if (fecha.value < hoy) {
+                document.getElementById('fechaError').textContent = "La fecha no puede ser anterior a hoy.";
+                valido = false;
+            } else {
+                document.getElementById('fechaError').textContent = "";
+            }
+
+            if (!valido) {
+                event.preventDefault();
+            }
+        });
+    </script>
+	
+</body>
+</html>
