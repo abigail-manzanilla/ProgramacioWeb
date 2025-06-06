@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pago - La Buena y Deliciosa</title>
+  <link rel="stylesheet" href="principal.css" />
+</head>
+<body>
+   <nav>
+    <a class="sc-eHgmQL kzWSGr" href="index.html" style="color: white; font-size: 2.5rem; font-family: 'Pacifico', cursive; text-decoration: none;">La Buena y Deliciosa</a>
+    <a href="index.html" onclick="mostrarSeccion('inicio')">Inicio</a>
+    <a href="productos.html" onclick="mostrarSeccion('productos')">Productos</a>
+    <a href="carrito.html" class="carrito-link"> 🛒 <span id="contador-carrito">0</span> </a>
+    <a href="pago.html" onclick="mostrarSeccion('pago')">Formas de Pago</a>
+  </nav>
+
+  <section id="pago" class="seccion">
+    <h2>Formas de Pago</h2>
+    <p>Aceptamos pagos con tarjeta de crédito y débito.</p>
+    <div class="container">
+      <h2>Método de pago</h2>
+      <form id="form-pago" action="#" method="POST">
+        <label>Método de Pago:</label>
+        <select id="metodo-pago" required>
+          <option value="credito">Tarjeta de Crédito</option>
+          <option value="debito">Tarjeta de Débito</option>
+          <option value="paypal">PayPal</option>
+        </select>
+
+        <label>Número de Tarjeta:</label>
+        <input type="text" id="numero-tarjeta" placeholder="Ingrese su número de tarjeta" required maxlength="18">
+        <span id="tarjeta-error" style="color: red; display: none;">Debe tener 16 o 18 dígitos</span>
+
+        <label>Nombre del Titular:</label>
+        <input type="text" id="nombre-titular" placeholder="Ingrese su nombre" required>
+        <span id="nombre-error" style="color: red; font-size: 12px; display: none;"></span>
+
+        <label>Fecha de Expiración:</label>
+        <input type="date" id="fecha-exp" min="2024-01-01" max="2035-12-01" required>
+
+        <label>CVV:</label>
+        <input type="password" id="cvv" placeholder="CVV" required maxlength="3">
+        <span id="cvv-error" style="color: red; font-weight: bold; display: none;"></span>
+
+        <button type="submit" id="btn-pagar">Pagar</button>
+      </form>
+
+      <!-- Mensaje de éxito -->
+      <div id="mensaje-exito" style="display: none; color: green; font-weight: bold; margin-top: 10px;">
+          ✅ Pago realizado con éxito.
+      </div>
+    </div>
+  </section>
+
+  <script>
+  // Función para actualizar el contador del carrito leyendo localStorage
+  function actualizarContador() {
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    document.getElementById('contador-carrito').textContent = carrito.length;
+  }
+  actualizarContador();
+
+  // Actualiza el contador cuando cambia el localStorage desde otras pestañas
+  window.addEventListener('storage', function (e) {
+    if (e.key === 'carrito') {
+      actualizarContador();
+    }
+  });
+
+  // Validación Número de Tarjeta
+  document.getElementById("numero-tarjeta").addEventListener("input", function () {
+    let tarjeta = this.value.replace(/\D/g, "");
+    let mensajeError = document.getElementById("tarjeta-error");
+
+    if (tarjeta.length === 16 || tarjeta.length === 18) {
+      mensajeError.style.display = "none"; 
+    } else {
+      mensajeError.style.display = "inline"; 
+    }
+
+    this.value = tarjeta.substring(0, 18);
+  });
+
+  // Validación Nombre del Titular
+  document.getElementById("nombre-titular").addEventListener("input", function () {
+    let nombre = this.value;
+    let mensajeError = document.getElementById("nombre-error");
+
+    if (/^[A-Za-z\s]+$/.test(nombre) || nombre === "") {
+      mensajeError.style.display = "none"; 
+    } else {
+      mensajeError.style.display = "inline"; 
+    }
+
+    this.value = nombre.replace(/[^A-Za-z\s]/g, ""); 
+  });
+
+  // Validación CVV
+  document.getElementById("cvv").addEventListener("input", function () {
+    let cvv = this.value.replace(/\D/g, "");
+    let mensajeError = document.getElementById("cvv-error");
+
+    if (cvv.length === 3) {
+      mensajeError.style.display = "none"; 
+    } else {
+      mensajeError.style.display = "block"; 
+    }
+
+    this.value = cvv.substring(0, 3);
+  });
+
+  // Validación y envío del formulario
+  document.getElementById("form-pago").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    let metodo = document.getElementById("metodo-pago").value;
+    let nombre = document.getElementById("nombre-titular").value;
+    let tarjeta = document.getElementById("numero-tarjeta").value;
+    let cvv = document.getElementById("cvv").value;
+    let fecha = document.getElementById("fecha-exp").value;
+
+    if (metodo && nombre && (tarjeta.length === 16 || tarjeta.length === 18) && cvv.length === 3 && fecha) {
+      document.getElementById("mensaje-exito").style.display = "block"; 
+
+      // ✅ Limpiar carrito en todas las pestañas
+      localStorage.removeItem('carrito');
+      window.dispatchEvent(new Event('storage')); // Para que la misma ventana también actualice
+
+      // Opcional: actualizar el contador al instante
+      actualizarContador();
+    } else {
+      alert("Por favor, complete todos los campos correctamente.");
+    }
+  });
+</script>
+
+</body>
+</html>

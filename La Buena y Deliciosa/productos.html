@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Productos - La Buena y Deliciosa</title>
+  <link rel="stylesheet" href="principal.css" />
+</head>
+<body>
+  <nav>
+    <a class="sc-eHgmQL kzWSGr" href="index.html" 
+       style="color: white; font-size: 2.5rem; font-family: 'Pacifico', cursive; text-decoration: none;">
+      La Buena y Deliciosa
+    </a>
+    <a href="index.html" onclick="mostrarSeccion('inicio')">Inicio</a>
+    <a href="productos.html" onclick="mostrarSeccion('productos')">Productos</a>
+    <a href="carrito.html" class="carrito-link"> 🛒 <span id="contador-carrito">0</span> </a>
+    <a href="pago.html" onclick="mostrarSeccion('pago')">Formas de Pago</a>
+  </nav>
+
+  <section id="productos" class="seccion">
+    <h2>Nuestros Productos</h2>
+    <!-- Selector de Categoría -->
+    <label for="categoria">Selecciona una categoría:</label>
+    <select id="categoria" onchange="categoriaPos()">
+      <option value="portada"></option>
+      <option value="cupcakes">CUPCAKES</option>
+      <option value="brownies">BROWNIES</option>
+      <option value="cheesecakes">CHEESECAKES</option>
+      <option value="tartas">TARTAS</option>
+      <option value="pasteles">PASTELES</option>
+    </select>
+
+    <div id="portada" class="categoria">
+      <h1>"ALEGRA TU DÍA CON DULzURA"</h1>
+      <div class="imagen" data-nombre="imagen" data-imagen="postres.jpeg">
+        <img src="postres.jpeg" alt="imagen" /></div>
+        </div>
+
+
+    <!-- CUPCAKES -->
+    <div id="cupcakes" class="categoria" style="display: none;">
+      <h3>CUPCAKES</h3>
+
+      <h4>OREO</h4>
+      <div class="producto" data-nombre="Cupcake de oreo" data-precio="15" data-imagen="oreo.jpg">
+        <img src="oreo.jpg" alt="Cupcake de oreo" />
+        
+        <p>$15</p>
+        <label>Cantidad:</label>
+        <input type="number" class="cantidad" value="1" min="1" max="100" />
+        <button onclick="agregarAlCarrito(this)">Agregar al Carrito</button>
+      </div>
+
+      <h4>RED VELVED</h4>
+      <div class="producto" data-nombre="Cupcake redvelvet" data-precio="15" data-imagen="red.jpg">
+        <img src="red.jpg" alt="Cupcake de redvelvet" />
+        
+        <p>$15</p>
+        <label>Cantidad:</label>
+        <input type="number" class="cantidad" value="1" min="1" max="100" />
+        <button onclick="agregarAlCarrito(this)">Agregar al Carrito</button>
+      </div>
+
+      <h4>CHOCOLATE</h4>
+      <div class="producto" data-nombre="Cupcake de Chocolate" data-precio="15" data-imagen="chocolate.jpg">
+        <img src="chocolate.jpg" alt="Cupcake de chocolate" />
+        
+        <p>$15</p>
+        <label>Cantidad:</label>
+        <input type="number" class="cantidad" value="1" min="1" max="100" />
+        <button onclick="agregarAlCarrito(this)">Agregar al Carrito</button>
+      </div>
+
+      <h4>LIMÓN</h4>
+      <div class="producto" data-nombre="Cupcake de Limón" data-precio="15" data-imagen="limon.jpg">
+        <img src="limon.jpg" alt="Cupcake de limón" />
+        
+        <p>$15</p>
+        <label>Cantidad:</label>
+        <input type="number" class="cantidad" value="1" min="1" max="100" />
+        <button onclick="agregarAlCarrito(this)">Agregar al Carrito</button>
+      </div>
+
+      <h4>VAINILLA</h4>
+      <div class="producto" data-nombre="Cupcake vainilla" data-precio="15" data-imagen="vainilla.jpg">
+        <img src="vainilla.jpg" alt="Cupcake vainilla" />
+        <p>$15</p>
+        <label>Cantidad:</label>
+        <input type="number" class="cantidad" value="1" min="1" max="100" />
+        <button onclick="agregarAlCarrito(this)">Agregar al Carrito</button>
+      </div>
+
+      <h4>FRESA</h4>
+      <div class="producto" data-nombre="Cupcake de fresa" data-precio="15" data-imagen="fresa2.jpg">
+        <img src="fresa2.jpg" alt="Cupcake de fresa" />
+        
+        <p>$15</p>
+        <label>Cantidad:</label>
+        <input type="number" class="cantidad" value="1" min="1" max="100" />
+        <button onclick="agregarAlCarrito(this)">Agregar al Carrito</button>
+      </div>
+
+      <h4>FRAMBUESA</h4>
+      <div class="producto" data-nombre="Cupcake de frambuesa" data-precio="18" data-imagen="frambuesa.jpeg">
+        <img src="frambuesa.jpeg" alt="Cupcake de frambuesa" />
+        
+        <p>$18</p>
+        <label>Cantidad:</label>
+        <input type="number" class="cantidad" value="1" min="1" max="100" />
+        <button onclick="agregarAlCarrito(this)">Agregar al Carrito</button>
+      </div>
+
+      <h4>PISTACHO</h4>
+      <div class="producto" data-nombre="Cupcake de pistacho" data-precio="18" data-imagen="pistacho.jpg">
+        <img src="pistacho.jpg" alt="Cupcake de pistacho" />
+        
+        <p>$18</p>
+        <label>Cantidad:</label>
+        <input type="number" class="cantidad" value="1" min="1" max="100" />
+        <button onclick="agregarAlCarrito(this)">Agregar al Carrito</button>
+      </div>
+
+      <h4>FERRERO</h4>
+      <div class="producto" data-nombre="Cupcake de ferrero" data-precio="18" data-imagen="ferrero.jpeg">
+        <img src="ferrero.jpeg" alt="Cupcake de ferrero" />
+        
+        <p>$18</p>
+        <label>Cantidad:</label>
+        <input type="number" class="cantidad" value="1" min="1" max="100" />
+        <button onclick="agregarAlCarrito(this)">Agregar al Carrito</button>
+      </div>
+
+    </div>
+
+    
+
+    <!-- BROWNIES -->
+    <div id="brownies" class="categoria" style="display: none;">
+      <h3>Brownies</h3>
+
+      <h4>CLÁSICO</h4>
+      <div class="producto" data-nombre="Brownie Clásico" data-precio="25" data-imagen="clasic.jpg">
+        <img src="clasic.jpg" alt="Brownie clásico" />
+        
+        <p>$25</p>
+        <label>Cantidad:</label>
+        <input type="number" class="cantidad" value="1" min="1" max="100" />
+        <button onclick="agregarAlCarrito(this)">Agregar al Carrito</button>
+      </div>
+   
+      <h4>DOBLE CHOCOLATE</h4>
+      <div class="producto" data-nombre="Brownie Doble Chocolate" data-precio="" data-imagen="chocolate2.jpg">
+        <img src="chocolate2.jpg" alt="Brownie Doble Chocolate" />
+        <p>$30</p>
+        <label>Cantidad:</label>
+        <input type="number" class="cantidad" value="1" min="1" max="100" />
+        <button onclick="agregarAlCarrito(this)">Agregar al Carrito</button>
+      </div>
+
+      <h4>NUTELLA</h4>
+      <div class="producto" data-nombre="Brownie de nutella" data-precio="" data-imagen="nutella.jpg">
+        <img src="nutella.jpg" alt="Brownie de nutella" />
+        <p>$30</p>
+        <label>Cantidad:</label>
+        <input type="number" class="cantidad" value="1" min="1" max="100" />
+        <button onclick="agregarAlCarrito(this)">Agregar al Carrito</button>
+      </div>
+
+      <h4>NUEZ</h4>
+      <div class="producto" data-nombre="Brownie de nuez" data-precio="" data-imagen="nuez.jpg">
+        <img src="nuez.jpg" alt="Brownie de nuez" />
+        <p>$35</p>
+        <label>Cantidad:</label>
+        <input type="number" class="cantidad" value="1" min="1" max="100" />
+        <button onclick="agregarAlCarrito(this)">Agregar al Carrito</button>
+      </div>
+
+      <h4>CHOCOLATE NEGRO Y AVELLANAS</h4>
+      <div class="producto" data-nombre="Brownie ChocolateN" data-precio="" data-imagen="avellana.jpg">
+        <img src="avellana.jpg" alt="Brownie ChocolateN" />
+        <p>$35</p>
+        <label>Cantidad:</label>
+        <input type="number" class="cantidad" value="1" min="1" max="100" />
+        <button onclick="agregarAlCarrito(this)">Agregar al Carrito</button>
+      </div>
+
+
+    </div>
+
+    <!-- CHEESECAKES -->
+    <div id="cheesecakes" class="categoria" style="display: none;">
+      <h3>Cheesecakes</h3>
+
+      <h4>LIMÓN</h4>
+      <div class="producto" data-nombre="Cheesecake de limon" data-precio="280" data-imagen="climon.jpg">
+        <img src="climon.jpg" alt="Cheesecake de limon" />
+        <p>$280</p>
+        <label>Cantidad:</label>
+        <input type="number" class="cantidad" value="1" min="1" max="10" />
+        <button onclick="agregarAlCarrito(this)">Agregar al Carrito</button>
+      </div>
+
+      <h4>MANGO</h4>
+      <div class="producto" data-nombre="Cheesecake de mango" data-precio="280" data-imagen="Cmango.jpg">
+        <img src="Cmango.jpg" alt="Cheesecake de mango" />
+        <p>$280</p>
+        <label>Cantidad:</label>
+        <input type="number" class="cantidad" value="1" min="1" max="10" />
+        <button onclick="agregarAlCarrito(this)">Agregar al Carrito</button>
+      </div>
+
+      <h4>CHOCOLATE</h4>
+      <div class="producto" data-nombre="Cheesecake de chocolate" data-precio="280" data-imagen="Cchocolate.jpg">
+        <img src="Cchocolate.jpg" alt="Cheesecake de chocolate" />
+        <p>$280</p>
+        <label>Cantidad:</label>
+        <input type="number" class="cantidad" value="1" min="1" max="10" />
+        <button onclick="agregarAlCarrito(this)">Agregar al Carrito</button>
+      </div>
+
+      <h4>FRESA</h4>
+      <div class="producto" data-nombre="Cheesecake de Fresa" data-precio="280" data-imagen="Cfresa.jpg">
+        <img src="Cfresa.jpg" alt="Cheesecake de fresa" />
+        <p>$280</p>
+        <label>Cantidad:</label>
+        <input type="number" class="cantidad" value="1" min="1" max="10" />
+        <button onclick="agregarAlCarrito(this)">Agregar al Carrito</button>
+      </div>
+    </div>
+
+    <!-- TARTAS -->
+    <div id="tartas" class="categoria" style="display: none;">
+        <h3>Tartas</h3>
+
+      <h4>MANZANA</h4>
+      <div class="producto" data-nombre="Tarta de Manzana" data-precio="250" data-imagen="tmanzana.jpg">
+        <img src="tmanzana.jpg" alt="Tarta de manzana" />
+        <p>$250</p>
+        <label>Cantidad:</label>
+        <input type="number" class="cantidad" value="1" min="1" max="10" />
+        <button onclick="agregarAlCarrito(this)">Agregar al Carrito</button>
+      </div>
+
+      <h4>FRAMBUESA</h4>
+      <div class="producto" data-nombre="Tarta de frambuesa" data-precio="250" data-imagen="tframbuesa.jpg">
+        <img src="tframbuesa.jpg" alt="Tarta de frambuesa" />
+        <p>$250</p>
+        <label>Cantidad:</label>
+        <input type="number" class="cantidad" value="1" min="1" max="10" />
+        <button onclick="agregarAlCarrito(this)">Agregar al Carrito</button>
+      </div>
+
+      <h4>FRESA</h4>
+      <div class="producto" data-nombre="Tarta de fresa" data-precio="250" data-imagen="tfresa.jpg">
+        <img src="tfresa.jpg" alt="Tarta de fresa" />
+        <p>$250</p>
+        <label>Cantidad:</label>
+        <input type="number" class="cantidad" value="1" min="1" max="10" />
+        <button onclick="agregarAlCarrito(this)">Agregar al Carrito</button>
+      </div>
+
+      <h4>FRUTAS</h4>
+      <div class="producto" data-nombre="Tarta de frutas" data-precio="250" data-imagen="tfrutas.jpeg">
+        <img src="tfrutas.jpeg" alt="Tarta de frutas" />
+        <p>$250</p>
+        <label>Cantidad:</label>
+        <input type="number" class="cantidad" value="1" min="1" max="100" />
+        <button onclick="agregarAlCarrito(this)">Agregar al Carrito</button>
+      </div>
+
+
+
+    </div>
+
+    <!-- PASTELES -->
+    <div id="pasteles" class="categoria" style="display: none;">
+      <h3>Pasteles</h3>
+
+      <h4>CHOCOLATE</h4>
+      <div class="producto" data-nombre="Pastel de Chocolate" data-precio="350" data-imagen="pchocolate.jpg">
+        <img src="pchocolate.jpg" alt="Pastel de chocolate" />
+        <p>$350</p>
+        <label>Cantidad:</label>
+        <input type="number" class="cantidad" value="1" min="1" max="15" />
+        <button onclick="agregarAlCarrito(this)">Agregar al Carrito</button>
+      </div>
+
+      <h4>FRESA</h4>
+      <div class="producto" data-nombre="Pastel de fresa" data-precio="350" data-imagen="pfresa.jpg">
+        <img src="pfresa.jpg" alt="Pastel de fresa" />
+        <p>$350</p>
+        <label>Cantidad:</label>
+        <input type="number" class="cantidad" value="1" min="1" max="15" />
+        <button onclick="agregarAlCarrito(this)">Agregar al Carrito</button>
+      </div>
+
+      <h4>TRES LECHES</h4>
+      <div class="producto" data-nombre="Pastel tres leches" data-precio="350" data-imagen="pleche.jpg">
+        <img src="pleche.jpg" alt="Pastel de chocolate" />
+        <p>$350</p>
+        <label>Cantidad:</label>
+        <input type="number" class="cantidad" value="1" min="1" max="15" />
+        <button onclick="agregarAlCarrito(this)">Agregar al Carrito</button>
+      </div>
+
+      <h4>CAJETA</h4>
+      <div class="producto" data-nombre="Pastel de cajeta" data-precio="350" data-imagen="pcajeta.jpg">
+        <img src="pcajeta.jpg" alt="Pastel de cajeta" />
+        <p>$350</p>
+        <label>Cantidad:</label>
+        <input type="number" class="cantidad" value="1" min="1" max="115" />
+        <button onclick="agregarAlCarrito(this)">Agregar al Carrito</button>
+      </div>
+
+      <h4>MOKA</h4>
+      <div class="producto" data-nombre="Pastel de moka" data-precio="380" data-imagen="pmoka.jpg">
+        <img src="pmoka.jpg" alt="Pastel de moka" />
+        <p>$380</p>
+        <label>Cantidad:</label>
+        <input type="number" class="cantidad" value="1" min="1" max="15" />
+        <button onclick="agregarAlCarrito(this)">Agregar al Carrito</button>
+      </div>
+
+      <h4>FERRERO</h4>
+      <div class="producto" data-nombre="Pastel de ferrero" data-precio="380" data-imagen="pferrero.jpg">
+        <img src="pferrero.jpg" alt="Pastel de ferrero" />
+        <p>$380</p>
+        <label>Cantidad:</label>
+        <input type="number" class="cantidad" value="1" min="1" max="15" />
+        <button onclick="agregarAlCarrito(this)">Agregar al Carrito</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+    function actualizarContador() {
+      let totalItems = carrito.reduce((sum, item) => sum + item.cantidad, 0);
+      document.getElementById('contador-carrito').textContent = totalItems;
+    }
+
+    function agregarAlCarrito(boton) {
+      let producto = boton.parentElement;
+      let nombre = producto.getAttribute("data-nombre");
+      let precio = parseFloat(producto.getAttribute("data-precio"));
+      let imagen = producto.getAttribute("data-imagen");
+      let cantidad = parseInt(producto.querySelector(".cantidad").value);
+
+      if (cantidad > 0) {
+        let productoExistente = carrito.find(item => item.nombre === nombre);
+
+        if (productoExistente) {
+          productoExistente.cantidad += cantidad;
+        } else {
+          carrito.push({ nombre, precio, cantidad, imagen });
+        }
+
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+        actualizarContador();
+        alert(nombre + " agregado al carrito.");
+      } else {
+        alert("Por favor, ingresa una cantidad válida.");
+      }
+    }
+
+    function categoriaPos() {
+      const todas = document.querySelectorAll(".categoria");
+      const seleccion = document.getElementById("categoria").value;
+
+      todas.forEach(div => {
+        div.style.display = ( div.id === seleccion) ? "block" : "none";
+      });
+    }
+
+    actualizarContador();
+    categoriaPos();
+  </script>
+</body>
+</html>
