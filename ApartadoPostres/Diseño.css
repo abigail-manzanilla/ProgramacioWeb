@@ -1,0 +1,47 @@
+.productos img { 
+
+    width: 130px; 
+     height: 150px;               /* altura automática */
+     
+    border-radius: 20px;
+}
+label{
+    
+        color: #483D8B; 
+        font: oblique bold 120% cursive;
+    
+
+}
+
+p {
+    color: #D87093;     
+     font-style: italic 120%;             
+    
+    font-size: 30px;            
+    text-align: center;           
+    border-radius: 50px;           
+}
+h1{
+color: #CD5C5C; 
+    font-family: Arial, sans-serif;
+    font-size: 40px;
+    text-align: center;
+    font-style: oblique;
+	
+}
+h3{
+
+  color: #E9967A; 
+  font: oblique bold 120% cursive;
+    
+    font-size: 30px;
+    text-align: center;
+  
+}
+body {
+  text-align: center; 
+  background: url("fondo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

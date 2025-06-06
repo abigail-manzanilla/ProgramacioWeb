@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="Diseño.css">
+	<title>Postres</title>
+</head>
+<body>
+<p>Para los amantes de la dulsura "La buena y deliciosa" ofrece productos de calidad para degustar el paladar por su rico sabor y gran calidad en cada postre</p>
+
+  
+  <h1>"ALEGRA TU DÍA CON DULSURA"</h1>
+
+   
+
+    <label for="text">Selecciona el tipo de postre:</label>
+    <select id="categoriaPostres" name="categoriaPostres" onchange="categoriaPos()">
+      <option value="cupcakes">CUPCAKES</option>
+      <option value="brownies">BROWNIES</option>
+      <option value="cheesecakes">CHEESECAKES</option>
+      <option value="tartas">TARTAS</option>
+      <option value="pasteles">PASTELES</option>
+    </select>
+    
+    <div id="cupcakes" class="categoriaPostres">  
+      <h3>CUPCAKES</h3>
+
+      <h4>OREO</h4>
+      <div class="postres" data-nombre="cupcakes"  data-imagen="oreo.jpg">
+        <img src="oreo.jpg" alt="Cupcakes de oreo">
+
+        <select id="precio" name="precio" required>
+            <option value=""> Seleccione...</option>
+            <option value="pastel">12 pzs $195</option>
+            <option value="cupcake">24 pzs $350</option> 
+        </select>
+        <label for="cantidad-tarta">Cantidad:</label>
+        <input type="number" id="cantidad-tarta" value="1" min="1" max="20">
+        <button onclick="agregarAlCarrito(this, 'cantidad-tarta')">Agregar al Carrito</button></div>
+
+        <h4>RED VELVED</h4>
+      <div class="postres" data-nombre="cupcakes"  data-imagen="fresa.jpg">
+        <img src="fresa.jpg" alt="Cupcakes de RV">
+        
+        <select id="precio" name="precio" required>
+            <option value="">Seleccione...</option>
+            <option value="pastel">12 pzs $195</option>
+            <option value="cupcake">24 pzs $350</option> 
+        </select>
+        <label for="cantidad-tarta">Cantidad:</label>
+        <input type="number" id="cantidad-tarta" value="1" min="1" max="20">
+        <button onclick="agregarAlCarrito(this, 'cantidad-tarta')">Agregar al Carrito</button></div>
+
+        <h4>LIMON</h4>
+      <div class="postres" data-nombre="cupcakes" data-imagen="  limon.jpg">
+        <img src="limon.jpg" alt="Cupcakes de limon">
+        
+        <select id="precio" name="precio" required>
+            <option value="">Seleccione...</option>
+            <option value="pastel">12 pzs $195</option>
+            <option value="cupcake">24 pzs $350</option> 
+        </select>
+        <label for="cantidad-tarta">Cantidad:</label>
+        <input type="number" id="cantidad-tarta" value="1" min="1" max="20">
+        <button onclick="agregarAlCarrito(this, 'cantidad-tarta')">Agregar al Carrito</button></div>
+
+        <h4>CHOCOLATE</h4>
+      <div class="postres" data-nombre="cupcakes" data-imagen="CHOCOLATE.jpg">
+        <img src="CHOCOLATE.jpg" alt="Cupcakes de chocolate">
+        
+        <select id="precio" name="precio" required>
+            <option value="">Seleccione...</option>
+            <option value="12 piezas">12 pzs $195</option>
+            <option value="24 piezas">24 pzs $350</option> 
+        </select>
+        <label for="cantidad-tarta">Cantidad:</label>
+        <input type="number" id="cantidad-tarta" value="1" min="1" max="20">
+        <button onclick="agregarAlCarrito(this, 'cantidad-tarta')">Agregar al Carrito</button></div>
+
+        <h4>VAINILLA</h4>
+      <div class="postres" data-nombre="cupcakes" data-imagen="VAINILLA.jpg">
+        <img src="VAINILLA.jpg" alt="Cupcakes de vainilla">
+        
+        <select id="precio" name="precio" required>
+            <option value="">Seleccione...</option>
+            <option value="12 piezas">12 pzs $195</option>
+            <option value="24 piezas">24 pzs $350</option> 
+        </select>
+        <label for="cantidad-tarta">Cantidad:</label>
+        <input type="number" id="cantidad-tarta" value="1" min="1" max="20">
+        <button onclick="agregarAlCarrito(this, 'cantidad-tarta')">Agregar al Carrito</button></div>
+
+      
+        <h4>FRAMBUESA</h4>
+      <div class="postres" data-nombre="cupcakes" data-imagen="FRAMBUESA.jpg">
+        <img src="FRAMBUESA.jpg" alt="Cupcakes de frambuesa">
+        
+        <select id="precio" name="precio" required>
+            <option value="">Seleccione...</option>
+            <option value="12 piezas">12 pzs $195</option>
+            <option value="24 piezas">24 pzs $350</option> 
+        </select>
+        <label for="cantidad-tarta">Cantidad:</label>
+        <input type="number" id="cantidad-tarta" value="1" min="1" max="20">
+        <button onclick="agregarAlCarrito(this, 'cantidad-tarta')">Agregar al Carrito</button></div>
+
+        <h4>FRESA</h4>
+      <div class="postres" data-nombre="cupcakes" data-imagen="FRESA2.jpg">
+        <img src="FRESA2.jpg" alt="Cupcakes de fresa">
+        
+        <select id="precio" name="precio" required>
+            <option value="">Seleccione...</option>
+            <option value="12 piezas">12 pzs $195</option>
+            <option value="24 piezas">24 pzs $350</option> 
+        </select>
+        <label for="cantidad-tarta">Cantidad:</label>
+        <input type="number" id="cantidad-tarta" value="1" min="1" max="20">
+        <button onclick="agregarAlCarrito(this, 'cantidad-tarta')">Agregar al Carrito</button></div>
+
+        <h4>PISTACHO</h4>
+      <div class="postres" data-nombre="cupcakes" data-imagen="PISTACHO.jpg">
+        <img src="PISTACHO.jpg" alt="Cupcakes de PISTACHO
+        ">
+        
+        <select id="precio" name="precio" required>
+            <option value="">Seleccione...</option>
+            <option value="12 piezas">12 pzs $195</option>
+            <option value="24 piezas">24 pzs $350</option> 
+        </select>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" value="1" min="1" max="20">
+        <button onclick="agregarAlCarrito(this, 'cantidad')">Agregar al Carrito</button></div>
+
+    </div>
+
+     <!-- BROWNIES -->
+    <div id="brownies" class="categoriaPostres" style="display: none;">
+      <h3>BROWNIES</h3>
+      
+       <h4>CLASICO</h4>
+      <div class="postres" data-nombre="brownies" data-imagen="CLASIC.jpg">
+        <img src="CLASIC.jpg" alt="brownies clasico">
+        
+        <select id="precio" name="precio" required>
+            <option value="">Seleccione...</option>
+            <option value="individual">individual $25</option>
+            <option value="6 piezas">6 pzs $120</option> 
+            <option value="12 piezas">12 pzs $210</option> 
+        </select>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" value="1" min="1" max="20">
+        <button onclick="agregarAlCarrito(this, 'cantidad')">Agregar al Carrito</button></div>
+
+        <h4>NUTELLA</h4>
+      <div class="postres" data-nombre="brownies" data-imagen="NUTELLA.jpg">
+        <img src="NUTELLA.jpg" alt="brownies de nutella">
+        
+        <select id="precio" name="precio" required>
+            <option value="">Seleccione...</option>
+            <option value="individual">individual $30</option>
+            <option value="6 piezas">6 pzs $160</option> 
+            <option value="12 piezas">12 pzs $280</option> 
+        </select>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" value="1" min="1" max="20">
+        <button onclick="agregarAlCarrito(this, 'cantidad')">Agregar al Carrito</button></div>
+
+        <h4>DOBLE CHOCOLATE</h4>
+      <div class="postres" data-nombre="brownies" data-imagen="CHOCOLATE2.jpg">
+        <img src="CHOCOLATE2.jpg" alt="brownies de chocolate">
+        
+        <select id="precio" name="precio" required>
+            <option value="">Seleccione...</option>
+            <option value="individual">individual $30</option>
+            <option value="6 piezas">6 pzs $160</option> 
+            <option value="12 piezas">12 pzs $280</option> 
+        </select>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" value="1" min="1" max="20">
+        <button onclick="agregarAlCarrito(this, 'cantidad')">Agregar al Carrito</button></div>
+
+        <h4>NUEZ</h4>
+      <div class="postres" data-nombre="brownies" data-imagen="NUEZ.jpg">
+        <img src="NUEZ.jpg" alt="brownies de NUEZ">
+        
+        <select id="precio" name="precio" required>
+            <option value="">Seleccione...</option>
+            <option value="individual">individual $30</option>
+            <option value="6 piezas">6 pzs $160</option> 
+            <option value="12 piezas">12 pzs $280</option> 
+        </select>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" value="1" min="1" max="20">
+        <button onclick="agregarAlCarrito(this, 'cantidad')">Agregar al Carrito</button></div>
+
+        <h4>CHOCOLATE NEGRO Y AVELLANAS</h4>
+      <div class="postres" data-nombre="brownies" data-imagen="avellana.jpg">
+        <img src="avellana.jpg" alt="brownies de avellana">
+        
+        <select id="precio" name="precio" required>
+            <option value="">Seleccione...</option>
+            <option value="individual">individual $30</option>
+            <option value="6 piezas">6 pzs $160</option> 
+            <option value="12 piezas">12 pzs $280</option> 
+        </select>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" value="1" min="1" max="20">
+        <button onclick="agregarAlCarrito(this, 'cantidad')">Agregar al Carrito</button></div>
+
+
+      </div>
+
+      <!-- CHEESECAKES -->
+    <div id="cheesecakes" class="categoriaPostres" style="display: none;">
+      <p>CHEESECAKES</p>
+
+      <h4>LIMÓN</h4>
+      <div class="postres" data-nombre="cheesecakes" data-imagen="Climon.jpg">
+        <img src="Climon.jpg" alt="cheesecakes de limon">
+        
+        <select id="precio" name="precio" required>
+            <option value="">Seleccione...</option>
+            <option value="chico">Chico $485</option>
+            <option value="mediano">Mediano $675</option> 
+            <option value="grande">Grande $900</option> 
+        </select>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" value="1" min="1" max="20">
+        <button onclick="agregarAlCarrito(this, 'cantidad')">Agregar al Carrito</button></div>
+
+        <h4>MANGO</h4>
+      <div class="postres" data-nombre="cheesecakes" data-imagen="Cmango.jpg">
+        <img src="Cmango.jpg" alt="cheesecake de mango">
+        
+        <select id="precio" name="precio" required>
+            <option value="">Seleccione...</option>
+            <option value="chico">Chico $485</option>
+            <option value="mediano">Mediano $675</option> 
+            <option value="grande">Grande $900</option> 
+        </select>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" value="1" min="1" max="20">
+        <button onclick="agregarAlCarrito(this, 'cantidad')">Agregar al Carrito</button></div>
+
+        <h4>CHOCOLATE</h4>
+      <div class="postres" data-nombre="cheesecakes" data-imagen="Cchocolate.jpg">
+        <img src="Cchocolate.jpg" alt="cheesecakes de chocolate">
+        
+        <select id="precio" name="precio" required>
+            <option value="">Seleccione...</option>
+            <option value="chico">Chico $485</option>
+            <option value="mediano">Mediano $675</option> 
+            <option value="grande">Grande $900</option> 
+        </select>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" value="1" min="1" max="20">
+        <button onclick="agregarAlCarrito(this, 'cantidad')">Agregar al Carrito</button></div>
+
+        <h4>FRESA</h4>
+      <div class="postres" data-nombre="cheesecakes" data-imagen="Cfresa.jpg">
+        <img src="Cfresa.jpg" alt="cheesecakes de fresa">
+        
+        <select id="precio" name="precio" required>
+            <option value="">Seleccione...</option>
+            <option value="chico">Chico $485</option>
+            <option value="mediano">Mediano $675</option> 
+            <option value="grande">Grande $900</option> 
+        </select>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" value="1" min="1" max="20">
+        <button onclick="agregarAlCarrito(this, 'cantidad')">Agregar al Carrito</button></div>
+
+
+       </div>
+
+
+
+      <!-- TARTAS***************************************************************************** -->
+    <div id="tartas" class="categoriaPostres" style="display: none;">
+      <h3>TARTAS</h3>
+
+      <h4>FRAMBUESA</h4>
+      <div class="postres" data-nombre="tartas" data-imagen="tframbuesa.jpg">
+        <img src="tframbuesa.jpg" alt="tarta de frambuesa">
+        
+        <select id="precio" name="precio" required>
+            <option value="">Seleccione...</option>
+            <option value="chica">Chica $100</option>
+            <option value="media">Mediana $190</option> 
+            <option value="grande">Grande $290</option> 
+        </select>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" value="1" min="1" max="20">
+        <button onclick="agregarAlCarrito(this, 'cantidad')">Agregar al Carrito</button></div>
+
+        <h4>MANZANA</h4>
+      <div class="postres" data-nombre="tartas" data-imagen="tmanzana.jpg">
+        <img src="tmanzana.jpg" alt="tarta de manzana">
+        
+        <select id="precio" name="precio" required>
+            <option value="">Seleccione...</option>
+            <option value="chica">Chica $100</option>
+            <option value="media">Mediana $190</option> 
+            <option value="grande">Grande $290</option> 
+        </select>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" value="1" min="1" max="20">
+        <button onclick="agregarAlCarrito(this, 'cantidad')">Agregar al Carrito</button></div>
+
+        <h4>FRESA</h4>
+      <div class="postres" data-nombre="tartas" data-imagen="tfresa.jpg">
+        <img src="tfresa.jpg" alt="tarta de fresa">
+        
+        <select id="precio" name="precio" required>
+            <option value="">Seleccione...</option>
+            <option value="chica">Chica $100</option>
+            <option value="media">Mediana $190</option> 
+            <option value="grande">Grande $290</option> 
+        </select>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" value="1" min="1" max="20">
+        <button onclick="agregarAlCarrito(this, 'cantidad')">Agregar al Carrito</button></div>
+
+  </div>
+
+   </div>
+
+
+
+      <!-- PASTELES++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+    <div id="pasteles" class="categoriaPostres" style="display: none;">
+      <h3>PASTELES</h3>
+
+      <h4>CHOCOLATE</h4>
+      <div class="postres" data-nombre="pasteles" data-imagen="pchocolate.jpg">
+        <img src="pchocolate.jpg" alt="pastel de chocolate">
+        
+        <select id="precio" name="precio" required>
+            <option value="">Seleccione...</option>
+            <option value="chica">Chico $120</option>
+            <option value="media">Mediano $210</option> 
+            <option value="grande">Grande $350</option> 
+        </select>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" value="1" min="1" max="5">
+        <button onclick="agregarAlCarrito(this, 'cantidad')">Agregar al Carrito</button></div>
+
+        <h4>FRESA</h4>
+      <div class="postres" data-nombre="pasteles" data-imagen="pfresa.jpg">
+        <img src="pfresa.jpg" alt="paste de fresa">
+        
+        <select id="precio" name="precio" required>
+            <option value="">Seleccione...</option>
+            <option value="chica">Chico $120</option>
+            <option value="media">Mediano $210</option> 
+            <option value="grande">Grande $350</option> 
+        </select>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" value="1" min="1" max="5">
+        <button onclick="agregarAlCarrito(this, 'cantidad')">Agregar al Carrito</button></div>
+
+        <h4>TRES LECHES</h4>
+      <div class="postres" data-nombre="pasteles" data-imagen="PLECHE.jpg">
+        <img src="PLECHE.jpg" alt="3 leches">
+        
+         <select id="precio" name="precio" required>
+            <option value="">Seleccione...</option>
+            <option value="chica">Chico $120</option>
+            <option value="media">Mediano $210</option> 
+            <option value="grande">Grande $350</option> 
+        </select>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" value="1" min="1" max="5">
+        <button onclick="agregarAlCarrito(this, 'cantidad')">Agregar al Carrito</button></div>
+
+        <h4>CAJETA</h4>
+      <div class="postres" data-nombre="pasteles" data-imagen="pcajet.jpg">
+        <img src="pcajeta.jpg" alt="cajeta">
+        
+         <select id="precio" name="precio" required>
+            <option value="">Seleccione...</option>
+            <option value="chica">Chico $140</option>
+            <option value="media">Mediano $250</option> 
+            <option value="grande">Grande $380</option> 
+        </select>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" value="1" min="1" max="5">
+        <button onclick="agregarAlCarrito(this, 'cantidad')">Agregar al Carrito</button></div>
+
+        <h4>MOKA</h4>
+      <div class="postres" data-nombre="pasteles" data-imagen="PMOKA.jpg">
+        <img src="PMOKA.jpg" alt="moka">
+        
+         <select id="precio" name="precio" required>
+            <option value="">Seleccione...</option>
+            <option value="chica">Chico $140</option>
+            <option value="media">Mediano $250</option> 
+            <option value="grande">Grande $380</option> 
+        </select>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" value="1" min="1" max="5">
+        <button onclick="agregarAlCarrito(this, 'cantidad')">Agregar al Carrito</button></div>
+
+        <h4>FERRERO</h4>
+      <div class="postres" data-nombre="pasteles" data-imagen="PFERRERO.jpg">
+        <img src="PFERRERO.jpg" alt="ferrero">
+        
+         <select id="precio" name="precio" required>
+            <option value="">Seleccione...</option>
+            <option value="chica">Chico $140</option>
+            <option value="media">Mediano $250</option> 
+            <option value="grande">Grande $380</option> 
+        </select>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" value="1" min="1" max="5">
+        <button onclick="agregarAlCarrito(this, 'cantidad')">Agregar al Carrito</button></div>
+
+  </div>
+
+ </section>
+
+
+
+
+
+<script>
+
+    // Función para mostrar la categoría seleccionada
+    function categoriaPos() {
+      const categoriasPostres = ['cupcakes', 'brownies', 'cheesecakes','tartas','pasteles'];
+      const seleccion = document.getElementById('categoriaPostres').value;
+
+      categoriasPostres.forEach(categoria => {
+        document.getElementById(categoria).style.display = (categoria === seleccion) ? 'block' : 'none';});
+    }
+
+    actualizarContador();
+  </script>
+</body>
+</html>

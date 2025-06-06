@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Postres</title>
+</head>
+<body>
+  <section id="Postres" class="seccion">
+    <h2>Productos que se ofrecen:</h2>
+    <label for="categoria">Selecciona el tipo de postre:</label>
+    <select id="categoria" name="categoria" onchange="mostrarCategoria()">
+      <option value="cupcakes">CUPCAKES</option>
+      <option value="brownies">BROWNIES</option>
+      <option value="cheesecakes">CHEESECAKES</option>
+      <option value="tartas">TARTAS</option>
+      <option value="cheesecakes">PASTELES</option>
+    </select>
+	 <div id="cupcakes" class="categoria">
+      <h3>Cupcakes</h3>
+      <div class="producto" data-nombre="cupcakes" data-precio="150" data-imagen="tarta.jpg">
+        <img src="tarta.jpg" alt="Tarta de manzana">
+        <h3>Tarta de Manzana</h3>
+        <p>$150</p>
+        <label for="cantidad-tarta">Cantidad:</label>
+        <input type="number" id="cantidad-tarta" value="1" min="1" max="100">
+        <button onclick="agregarAlCarrito(this, 'cantidad-tarta')">Agregar al Carrito</button>
+      </div>
+</body>
+</html>

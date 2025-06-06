@@ -1,0 +1,22 @@
+#contenedor{
+	width: 200px;
+	height: 300px;
+	padding: 20px;
+	margin: 50px 60px;
+	border: 15px solid pink;
+	background: indigo;
+	box-sizing: content-box;
+
+}
+#contenedor2{
+
+	width: 200px;
+	height: 300px;
+	padding: 20px;
+
+	border: 15px groove yellow;
+	background: blue;
+	box-sizing: border-box;
+	overflow: visible; 
+	border-radius: 5px;
+}

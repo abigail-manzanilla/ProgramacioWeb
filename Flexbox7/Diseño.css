@@ -1,0 +1,28 @@
+.contenedor{
+
+display: flex;
+height: 600px;
+/*
+flex-direction: column-reverse;
+flex-wrap: wrap;
+flex-flow: row wrap;
+*/
+
+background: linear-gradient(to right, #FFF0F5,#D3D3D3);
+justify-content:end ;
+align-items: center;
+
+align-content: end;
+
+}
+
+
+.item{
+background-color:rgb(216, 191, 216);
+width: 30px;
+height: 30px;
+border: 5px solid black;
+margin: 40px;
+padding: 50px;
+
+}
