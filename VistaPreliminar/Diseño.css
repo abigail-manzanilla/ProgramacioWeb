@@ -1,0 +1,29 @@
+h2{
+text-align: center;
+	font-size:40px 
+}
+h1{
+text-align: center;
+	font-size:30px 
+}
+p{
+	text-align: left;
+	font-size:25px 
+}
+
+ul{
+	text-align: left;
+	font-size: 25px
+}
+.imagenIzq{
+	float: right;
+	margin-right: 200px; 
+  	width: 400px; 
+  	height: 350px;
+}
+body {
+  background: url('fondo.jpeg');
+   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
